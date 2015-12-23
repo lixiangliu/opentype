@@ -15,7 +15,12 @@
 
         xhr.onload = function (e) {
           console.time('parse');
+          console.log('Parse:');
           console.log(opentype.parse(this.response));
+          console.log('glyphArray:');
+          console.log(glyphArray);
+          console.log('glyphData:');
+          console.log(glyphData);
           console.timeEnd('parse');
         };
 
@@ -23,8 +28,6 @@
       }
 
       parse('fonts/sourcesanspro-regular.woff');
-      parse('fonts/sourcesanspro-regular.ttf');
-      parse('fonts/sourcesanspro-regular.otf');
     </script>
   </body>
 </html>
